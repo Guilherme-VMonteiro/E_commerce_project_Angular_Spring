@@ -8,18 +8,16 @@ Dependencias da API Java:
     * Spring Web
     * MySQL Driver
     * Spring Boot DevTools
+    * MapStruct
 
 Versão do Spring: 3.1.5
 
 Versão do Angular CLI: 16.2.5
 
-# Ideia
+# Metas
 
-A ideia é fazer um CRUD básico fazendo o front-end se comunicar com o back-end por meio de requisições http.
-
-
-# Como testar
-
-
-
- 
+- [X] Criar a API Básica com os 5 endpoints.
+- [X] Criar o front-end e implementar a API.
+- [ ] Melhorar o front-end esteticamente e sistematicamente.
+- [ ] Implementar o padrão value object(DTO) na API.
+- [ ] Implementar o carrinho de compras.
