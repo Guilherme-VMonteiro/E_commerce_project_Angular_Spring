@@ -1,2 +1,6 @@
-<p>listaprodutos works!</p>
-<app-produto></app-produto>
+<ul>
+  <li *ngFor="let produto of listaDeProdutos">
+    <app-produto [produto]="produto"></app-produto>
+  </li>
+</ul>
+
