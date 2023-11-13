@@ -1,0 +1,28 @@
+<section>
+  <h1>Produtos</h1>
+
+  <app-editar-panel *ngIf="editar" (fechar)="ativarEditar()" [produto]="produtoSelecionado"></app-editar-panel>
+  <table>
+    <tr>
+      <th id="id">Id</th>
+      <th id="nome">Nome do produto</th>
+      <th id="desc">Descrição</th>
+      <th id="url">Url da imagem</th>
+      <th id="qtd">Quantidade disponivel</th>
+      <th id="preco">Preço</th>
+      <th id="preco"></th>
+      <th id="preco"></th>
+    </tr>
+    <tr *ngFor="let produto of listaDeProdutos; let i = index">
+      <td><p>{{ produto.id }}</p></td>
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.descricao }}</td>
+      <td>{{ produto.urlImagem }}</td>
+      <td><p>{{ produto.quantidadeDisponivel }}</p></td>
+      <td><p>{{ produto.preco }}</p></td>
+      <td class="botao" (click)="ativarEditar()" (click)="coletarProduto(i)"><button>Editar</button></td>
+      <td class="botao"><button>Excluir</button></td>
+    </tr>
+  </table>
+
+</section>

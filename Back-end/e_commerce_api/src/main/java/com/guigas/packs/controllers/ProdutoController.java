@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.guigas.packs.entity.Produto;
+import com.guigas.packs.dto.ProdutoDTO;
 import com.guigas.packs.services.ProdutoService;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -25,23 +25,23 @@ public class ProdutoController {
 	ProdutoService service;
 	
 	@GetMapping("/{id}")
-	public Produto findById(@PathVariable(value = "id") Long id) {
+	public ProdutoDTO findById(@PathVariable(value = "id") Long id) {
 		return service.findById(id);
 	}
 	
 	@GetMapping
-	public List<Produto> findAll() {
+	public List<ProdutoDTO> findAll() {
 		return service.findAll();
 	}
 	
 	@PostMapping
-	public Produto create(@RequestBody Produto produto) {
-		return service.create(produto);
+	public ProdutoDTO create(@RequestBody ProdutoDTO produtoDTO) {
+		return service.create(produtoDTO);
 	}
 	
 	@PutMapping
-	public Produto update(@RequestBody Produto produto) {
-		return service.update(produto);
+	public ProdutoDTO update(@RequestBody ProdutoDTO produtoDTO) {
+		return service.update(produtoDTO);
 	}
 	
 	@DeleteMapping("/{id}")

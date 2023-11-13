@@ -1,0 +1,61 @@
+section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  padding: 50px 0px;
+}
+
+table {
+  width: 80%;
+
+  border: 1px solid black;
+}
+
+table tr td {
+  overflow: hidden;
+  white-space: nowarp;
+  text-overflow: ellipsis;
+}
+
+table tr td,
+th {
+  border: 1px solid black;
+}
+
+table tr th {
+  text-align: center;
+}
+
+table tr td p {
+  text-align: center;
+}
+
+#id,
+#qtd,
+#preco {
+  width: 4%;
+}
+
+#url {
+  width: 10%;
+}
+
+#nome,
+#desc {
+  width: 20%;
+}
+
+app-editar-panel{
+    position: absolute;
+    width: 800px;
+}
+
+
+
+

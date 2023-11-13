@@ -1,0 +1,50 @@
+<section>
+  <div id="sair_button">
+    <button (click)="fecharPainel()" style="border-radius: 50%">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <table>
+    <tr>
+      <th>Atributo</th>
+      <th>Input</th>
+    </tr>
+    <tr>
+      <td><p>ID</p></td>
+      <td><input type="text" name="id" [(ngModel)]="produto.id" /></td>
+    </tr>
+    <tr>
+      <td><p>Nome</p></td>
+      <td><input type="text" name="nome" [(ngModel)]="produto.nome"/></td>
+    </tr>
+    <tr>
+      <td><p>Descrição</p></td>
+      <td>
+        <input type="text" name="descicao" [(ngModel)]="produto.descicao"/>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Url Imagem</p></td>
+      <td><input type="text" name="url" [(ngModel)]="produto.urlImagem"/></td>
+    </tr>
+    <tr>
+      <td><p>Quantidade disponivel</p></td>
+      <td>
+        <input
+          type="text"
+          name="quantidade"
+          [(ngModel)]="produto.quantidadeDisponivel"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td><p>Preço</p></td>
+      <td><input type="text" name="preco" [(ngModel)]="produto.preco"/></td>
+    </tr>
+
+    <tr>
+      <button (click)="atualizar()">Atualizar</button>
+    </tr>
+  </table>
+</section>

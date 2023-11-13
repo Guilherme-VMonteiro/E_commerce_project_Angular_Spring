@@ -10,6 +10,11 @@ import { ListaprodutosComponent } from './components/listaprodutos/listaprodutos
 import { HeaderComponent } from './components/header/header.component';
 import { CarroselComponent } from './components/carrosel/carrosel.component';
 import { ListaSectionComponent } from './components/lista-section/lista-section.component';
+import { AdminPageComponent } from './components/admin/admin-page/admin-page.component';
+import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
+import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
+import { EditarPanelComponent } from './components/admin/editar-panel/editar-panel.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +24,18 @@ import { ListaSectionComponent } from './components/lista-section/lista-section.
     ListaprodutosComponent,
     HeaderComponent,
     CarroselComponent,
-    ListaSectionComponent
+    ListaSectionComponent,
+    AdminPageComponent,
+    AdminHeaderComponent,
+    AdminPanelComponent,
+    EditarPanelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
