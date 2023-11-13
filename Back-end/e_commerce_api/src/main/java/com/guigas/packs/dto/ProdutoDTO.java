@@ -1,85 +1,81 @@
 package com.guigas.packs.dto;
 
+import org.mapstruct.Mapping;
+import org.springframework.hateoas.RepresentationModel;
+
 import java.util.Objects;
 
-public class ProdutoDTO {
+public class ProdutoDTO extends RepresentationModel<ProdutoDTO> {
 
-	private Long id;
-	private String nome;
-	private String descricao;
-	private String urlImagem;
-	private Integer quantidadeDisponivel;
-	private Long preco;
+    private Long id_entity;
+    private String nome;
+    private String descricao;
+    private String urlImagem;
+    private Integer quantidadeDisponivel;
+    private Long preco;
 
-	public ProdutoDTO() {
-	}
+    public ProdutoDTO() {
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId_entity() {
+        return id_entity;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId_entity(Long id_entity) {
+        this.id_entity = id_entity;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public String getDescricao() {
-		return descricao;
-	}
+    public String getDescricao() {
+        return descricao;
+    }
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-	public String getUrlImagem() {
-		return urlImagem;
-	}
+    public String getUrlImagem() {
+        return urlImagem;
+    }
 
-	public void setUrlImagem(String urlImagem) {
-		this.urlImagem = urlImagem;
-	}
+    public void setUrlImagem(String urlImagem) {
+        this.urlImagem = urlImagem;
+    }
 
-	public Integer getQuantidadeDisponivel() {
-		return quantidadeDisponivel;
-	}
+    public Integer getQuantidadeDisponivel() {
+        return quantidadeDisponivel;
+    }
 
-	public void setQuantidadeDisponivel(Integer quantidadeDisponivel) {
-		this.quantidadeDisponivel = quantidadeDisponivel;
-	}
+    public void setQuantidadeDisponivel(Integer quantidadeDisponivel) {
+        this.quantidadeDisponivel = quantidadeDisponivel;
+    }
 
-	public Long getPreco() {
-		return preco;
-	}
+    public Long getPreco() {
+        return preco;
+    }
 
-	public void setPreco(Long preco) {
-		this.preco = preco;
-	}
+    public void setPreco(Long preco) {
+        this.preco = preco;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(descricao, id, nome, preco, quantidadeDisponivel, urlImagem);
-	}
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        ProdutoDTO that = (ProdutoDTO) object;
+        return Objects.equals(id_entity, that.id_entity) && Objects.equals(nome, that.nome) && Objects.equals(descricao, that.descricao) && Objects.equals(urlImagem, that.urlImagem) && Objects.equals(quantidadeDisponivel, that.quantidadeDisponivel) && Objects.equals(preco, that.preco);
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ProdutoDTO other = (ProdutoDTO) obj;
-		return Objects.equals(descricao, other.descricao) && Objects.equals(id, other.id)
-				&& Objects.equals(nome, other.nome) && Objects.equals(preco, other.preco)
-				&& Objects.equals(quantidadeDisponivel, other.quantidadeDisponivel)
-				&& Objects.equals(urlImagem, other.urlImagem);
-	}
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), id_entity, nome, descricao, urlImagem, quantidadeDisponivel, preco);
+    }
 }
