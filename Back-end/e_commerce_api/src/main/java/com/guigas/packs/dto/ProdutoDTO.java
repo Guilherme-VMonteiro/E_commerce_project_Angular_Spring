@@ -1,12 +1,16 @@
 package com.guigas.packs.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.mapstruct.Mapping;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.util.Objects;
 
+@JsonPropertyOrder({"id", "nome", "descricao", "urlImagem", "quantidadeDisponivel", "preco"})
 public class ProdutoDTO extends RepresentationModel<ProdutoDTO> {
 
+    @JsonProperty("id")
     private Long id_entity;
     private String nome;
     private String descricao;
